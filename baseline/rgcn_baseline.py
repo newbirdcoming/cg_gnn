@@ -203,8 +203,8 @@ def train_rgcn(
     data_root: Path,
     dim: int = 64,
     lr: float = 0.001,
-    epochs: int = 50,
-    batch_size: int = 512,
+    epochs: int = 5,
+    batch_size: int = 64,
     eval_every: int = 10,
     device: str = "cpu",
 ) -> dict:

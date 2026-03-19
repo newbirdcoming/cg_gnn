@@ -275,7 +275,9 @@ def main():
     project_root = Path(__file__).resolve().parents[1]
     data_root = project_root / "data"
     results_dir = project_root / "results"
+    outputs_dir = project_root / "outputs" / "subgraph"
     results_dir.mkdir(parents=True, exist_ok=True)
+    outputs_dir.mkdir(parents=True, exist_ok=True)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"[SubgraphModel] Device: {device}", flush=True)
@@ -292,7 +294,12 @@ def main():
     out_path.write_text(
         json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    out_path2 = outputs_dir / "metrics.json"
+    out_path2.write_text(
+        json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     print(f"[SubgraphModel] Metrics -> {out_path}", flush=True)
+    print(f"[SubgraphModel] Metrics -> {out_path2}", flush=True)
     print(f"[SubgraphModel] valid: {metrics['valid']}", flush=True)
     print(f"[SubgraphModel] test:  {metrics['test']}", flush=True)
 

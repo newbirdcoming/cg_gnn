@@ -27,11 +27,11 @@ class TransE(nn.Module):
 
 def train_transe(
     data_root: Path,
-    dim: int = 100,
+    dim: int = 64,
     lr: float = 0.001,
     margin: float = 1.0,
-    epochs: int = 50,
-    batch_size: int = 512,
+    epochs: int = 5,
+    batch_size: int = 64,
     eval_every: int = 10,
     device: str = "cpu",
 ) -> dict:
