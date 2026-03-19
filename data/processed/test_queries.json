@@ -1,0 +1,4929 @@
+[
+  {
+    "complaint_id": "热线-210210-012924",
+    "head_id": 1363,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210210-012924",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100198",
+    "head_id": 492,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030100198",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800379",
+    "head_id": 928,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030800379",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "热线-210312-039537",
+    "head_id": 1437,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:热线-210312-039537",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "网络-210323-030448",
+    "head_id": 1496,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:网络-210323-030448",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "网络-210323-030448",
+    "head_id": 1496,
+    "relation_id": 1,
+    "answers": [
+      2434
+    ],
+    "head": "complaint:网络-210323-030448",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响身体健康"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900410",
+    "head_id": 187,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020900410",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021500100",
+    "head_id": 317,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021500100",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100297",
+    "head_id": 508,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030100297",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900116",
+    "head_id": 981,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900116",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900692",
+    "head_id": 1020,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900692",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900697",
+    "head_id": 1021,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900697",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210203-001675",
+    "head_id": 1331,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210203-001675",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210203-001675",
+    "head_id": 1331,
+    "relation_id": 1,
+    "answers": [
+      2458
+    ],
+    "head": "complaint:热线-210203-001675",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:行人摔伤"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300635",
+    "head_id": 400,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022300635",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300635",
+    "head_id": 400,
+    "relation_id": 1,
+    "answers": [
+      2403
+    ],
+    "head": "complaint:JZ2021022300635",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:异味影响居住"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900850",
+    "head_id": 205,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900850",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700022",
+    "head_id": 112,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020700022",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200440",
+    "head_id": 34,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020200440",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200440",
+    "head_id": 34,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021020200440",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200539",
+    "head_id": 586,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200539",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400546",
+    "head_id": 702,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400546",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500182",
+    "head_id": 742,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030500182",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500753",
+    "head_id": 769,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030500753",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600289",
+    "head_id": 794,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600289",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600299",
+    "head_id": 797,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600299",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600327",
+    "head_id": 804,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600327",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600330",
+    "head_id": 805,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600330",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600385",
+    "head_id": 821,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600385",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600430",
+    "head_id": 835,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600430",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600479",
+    "head_id": 840,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600479",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700375",
+    "head_id": 896,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030700375",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800627",
+    "head_id": 954,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800627",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800634",
+    "head_id": 955,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800634",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800715",
+    "head_id": 972,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800715",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900472",
+    "head_id": 1012,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900472",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900647",
+    "head_id": 1016,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900647",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900747",
+    "head_id": 1025,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030900747",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000294",
+    "head_id": 1051,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000294",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000680",
+    "head_id": 1064,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000680",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000838",
+    "head_id": 1076,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000838",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100336",
+    "head_id": 1095,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100336",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200488",
+    "head_id": 37,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020200488",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700254",
+    "head_id": 122,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020700254",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700254",
+    "head_id": 122,
+    "relation_id": 1,
+    "answers": [
+      2404
+    ],
+    "head": "complaint:JZ2021020700254",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:异味扰民"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800287",
+    "head_id": 150,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800287",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800521",
+    "head_id": 161,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800521",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900653",
+    "head_id": 197,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900653",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900653",
+    "head_id": 197,
+    "relation_id": 1,
+    "answers": [
+      2435
+    ],
+    "head": "complaint:JZ2021020900653",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响车辆停放"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100504",
+    "head_id": 13,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020100504",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100504",
+    "head_id": 13,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021020100504",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000150",
+    "head_id": 219,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021000150",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900444",
+    "head_id": 189,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900444",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021300219",
+    "head_id": 295,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021300219",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020500543",
+    "head_id": 98,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020500543",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210214-013698",
+    "head_id": 1374,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210214-013698",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210214-013698",
+    "head_id": 1374,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:热线-210214-013698",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021300213",
+    "head_id": 293,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021300213",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700432",
+    "head_id": 130,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020700432",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100539",
+    "head_id": 14,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020100539",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100539",
+    "head_id": 14,
+    "relation_id": 1,
+    "answers": [
+      2397
+    ],
+    "head": "complaint:JZ2021020100539",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:安全隐患"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200524",
+    "head_id": 40,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020200524",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200524",
+    "head_id": 40,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021020200524",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022400081",
+    "head_id": 403,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022400081",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020600127",
+    "head_id": 103,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020600127",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210208-011375",
+    "head_id": 1351,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210208-011375",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100037",
+    "head_id": 1,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020100037",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100037",
+    "head_id": 1,
+    "relation_id": 1,
+    "answers": [
+      2397
+    ],
+    "head": "complaint:JZ2021020100037",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:安全隐患"
+    ]
+  },
+  {
+    "complaint_id": "网络-210208-020595",
+    "head_id": 1470,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:网络-210208-020595",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000349",
+    "head_id": 229,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021021000349",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000349",
+    "head_id": 229,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021021000349",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900367",
+    "head_id": 186,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021020900367",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021300120",
+    "head_id": 288,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021300120",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210214-021475",
+    "head_id": 1376,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210214-021475",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022800166",
+    "head_id": 459,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022800166",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900492",
+    "head_id": 1014,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900492",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000485",
+    "head_id": 1059,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000485",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700357",
+    "head_id": 891,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700357",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800410",
+    "head_id": 929,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800410",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700314",
+    "head_id": 877,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030700314",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000208",
+    "head_id": 1044,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000208",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200605",
+    "head_id": 600,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030200605",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400481",
+    "head_id": 687,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030400481",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000142",
+    "head_id": 1038,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031000142",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700242",
+    "head_id": 870,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700242",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000375",
+    "head_id": 1056,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031000375",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100638",
+    "head_id": 1122,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100638",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800620",
+    "head_id": 951,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030800620",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100192",
+    "head_id": 1082,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031100192",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000210",
+    "head_id": 1045,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021031000210",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800222",
+    "head_id": 913,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030800222",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900233",
+    "head_id": 995,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030900233",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000762",
+    "head_id": 1072,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000762",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100687",
+    "head_id": 1129,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021031100687",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700122",
+    "head_id": 856,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030700122",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100557",
+    "head_id": 1104,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100557",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600128",
+    "head_id": 775,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600128",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600279",
+    "head_id": 791,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600279",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021300047",
+    "head_id": 283,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021300047",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021200171",
+    "head_id": 279,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021021200171",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200025",
+    "head_id": 546,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200025",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400463",
+    "head_id": 681,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021030400463",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700174",
+    "head_id": 860,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700174",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700200",
+    "head_id": 863,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700200",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700320",
+    "head_id": 878,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700320",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700337",
+    "head_id": 883,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700337",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800636",
+    "head_id": 956,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800636",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800649",
+    "head_id": 957,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800649",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000539",
+    "head_id": 1060,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021031000539",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031000760",
+    "head_id": 1071,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031000760",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100642",
+    "head_id": 1123,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021031100642",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100678",
+    "head_id": 1126,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100678",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100692",
+    "head_id": 1130,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100692",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100717",
+    "head_id": 1135,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100717",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100719",
+    "head_id": 1136,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021031100719",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100862",
+    "head_id": 1143,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100862",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100862",
+    "head_id": 1143,
+    "relation_id": 1,
+    "answers": [
+      2432
+    ],
+    "head": "complaint:JZ2021031100862",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200100",
+    "head_id": 1147,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200100",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200144",
+    "head_id": 1153,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200144",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200163",
+    "head_id": 1154,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031200163",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200201",
+    "head_id": 1158,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200201",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200231",
+    "head_id": 1162,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031200231",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031300405",
+    "head_id": 1207,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031300405",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031300405",
+    "head_id": 1207,
+    "relation_id": 1,
+    "answers": [
+      2441
+    ],
+    "head": "complaint:JZ2021031300405",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:无处停车"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031400032",
+    "head_id": 1215,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031400032",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600200",
+    "head_id": 1238,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600200",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600200",
+    "head_id": 1238,
+    "relation_id": 1,
+    "answers": [
+      2408
+    ],
+    "head": "complaint:JZ2021031600200",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响休息"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600460",
+    "head_id": 1255,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600460",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600589",
+    "head_id": 1264,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600589",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600650",
+    "head_id": 1266,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600650",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600695",
+    "head_id": 1267,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600695",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600696",
+    "head_id": 1268,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021031600696",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700055",
+    "head_id": 1276,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031700055",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700055",
+    "head_id": 1276,
+    "relation_id": 1,
+    "answers": [
+      2386
+    ],
+    "head": "complaint:JZ2021031700055",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:反水"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700176",
+    "head_id": 1282,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031700176",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200655",
+    "head_id": 612,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200655",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200655",
+    "head_id": 612,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021030200655",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100172",
+    "head_id": 484,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100172",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100172",
+    "head_id": 484,
+    "relation_id": 1,
+    "answers": [
+      2393
+    ],
+    "head": "complaint:JZ2021030100172",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:存在安全隐患"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200561",
+    "head_id": 592,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030200561",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200561",
+    "head_id": 592,
+    "relation_id": 1,
+    "answers": [
+      2385
+    ],
+    "head": "complaint:JZ2021030200561",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不方便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300473",
+    "head_id": 642,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030300473",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300473",
+    "head_id": 642,
+    "relation_id": 1,
+    "answers": [
+      2432
+    ],
+    "head": "complaint:JZ2021030300473",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900013",
+    "head_id": 975,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030900013",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200067",
+    "head_id": 20,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020200067",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200067",
+    "head_id": 20,
+    "relation_id": 1,
+    "answers": [
+      2409
+    ],
+    "head": "complaint:JZ2021020200067",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响使用"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021600069",
+    "head_id": 330,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021600069",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021600069",
+    "head_id": 330,
+    "relation_id": 1,
+    "answers": [
+      2438
+    ],
+    "head": "complaint:JZ2021021600069",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:扬尘"
+    ]
+  },
+  {
+    "complaint_id": "热线-210212-015833",
+    "head_id": 1370,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210212-015833",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400889",
+    "head_id": 725,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400889",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021100204",
+    "head_id": 262,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021100204",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "网络-210224-022875",
+    "head_id": 1482,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:网络-210224-022875",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210212-003379",
+    "head_id": 1369,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:热线-210212-003379",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200358",
+    "head_id": 565,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200358",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200358",
+    "head_id": 565,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:JZ2021030200358",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100311",
+    "head_id": 509,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100311",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300260",
+    "head_id": 632,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030300260",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210303-011096",
+    "head_id": 1407,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210303-011096",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210303-017403",
+    "head_id": 1408,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210303-017403",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021600175",
+    "head_id": 337,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021600175",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600208",
+    "head_id": 1241,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600208",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600291",
+    "head_id": 1248,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031600291",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600515",
+    "head_id": 1256,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600515",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600515",
+    "head_id": 1256,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021031600515",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600516",
+    "head_id": 1257,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600516",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700023",
+    "head_id": 1275,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031700023",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700191",
+    "head_id": 1284,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031700191",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031700191",
+    "head_id": 1284,
+    "relation_id": 1,
+    "answers": [
+      2404
+    ],
+    "head": "complaint:JZ2021031700191",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:异味扰民"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300833",
+    "head_id": 658,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030300833",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300833",
+    "head_id": 658,
+    "relation_id": 1,
+    "answers": [
+      2442
+    ],
+    "head": "complaint:JZ2021030300833",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:有安全隐患"
+    ]
+  },
+  {
+    "complaint_id": "热线-210304-021654",
+    "head_id": 1413,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210304-021654",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210304-021654",
+    "head_id": 1413,
+    "relation_id": 1,
+    "answers": [
+      2417
+    ],
+    "head": "complaint:热线-210304-021654",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响居民出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700330",
+    "head_id": 880,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700330",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700330",
+    "head_id": 880,
+    "relation_id": 1,
+    "answers": [
+      2395
+    ],
+    "head": "complaint:JZ2021030700330",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:存在消防隐患"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200141",
+    "head_id": 1152,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200141",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200141",
+    "head_id": 1152,
+    "relation_id": 1,
+    "answers": [
+      2440
+    ],
+    "head": "complaint:JZ2021031200141",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:招苍蝇"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000090",
+    "head_id": 216,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021000090",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900814",
+    "head_id": 202,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020900814",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900814",
+    "head_id": 202,
+    "relation_id": 1,
+    "answers": [
+      2418
+    ],
+    "head": "complaint:JZ2021020900814",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响居民正常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900904",
+    "head_id": 206,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900904",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022000347",
+    "head_id": 378,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022000347",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022000347",
+    "head_id": 378,
+    "relation_id": 1,
+    "answers": [
+      2405
+    ],
+    "head": "complaint:JZ2021022000347",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:引发火灾"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022400426",
+    "head_id": 406,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022400426",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000613",
+    "head_id": 246,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021000613",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210211-002637",
+    "head_id": 1367,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210211-002637",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300061",
+    "head_id": 392,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022300061",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300061",
+    "head_id": 392,
+    "relation_id": 1,
+    "answers": [
+      2436
+    ],
+    "head": "complaint:JZ2021022300061",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响通行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022200113",
+    "head_id": 384,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022200113",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100254",
+    "head_id": 502,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100254",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100318",
+    "head_id": 510,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100318",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300703",
+    "head_id": 401,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022300703",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300703",
+    "head_id": 401,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:JZ2021022300703",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022800354",
+    "head_id": 469,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022800354",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210216-027953",
+    "head_id": 1384,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210216-027953",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020500253",
+    "head_id": 95,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020500253",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100022",
+    "head_id": 472,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100022",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100189",
+    "head_id": 488,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030100189",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400475",
+    "head_id": 686,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400475",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210216-012665",
+    "head_id": 1381,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210216-012665",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800307",
+    "head_id": 152,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800307",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-009975",
+    "head_id": 1329,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210202-009975",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-009975",
+    "head_id": 1329,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:热线-210202-009975",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022800179",
+    "head_id": 463,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021022800179",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900933",
+    "head_id": 207,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021020900933",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800167",
+    "head_id": 146,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021020800167",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020500050",
+    "head_id": 87,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020500050",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-006321",
+    "head_id": 1328,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:热线-210202-006321",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-006321",
+    "head_id": 1328,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:热线-210202-006321",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021200109",
+    "head_id": 276,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021021200109",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800501",
+    "head_id": 160,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800501",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800501",
+    "head_id": 160,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021020800501",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-001895",
+    "head_id": 1326,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210202-001895",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210202-001895",
+    "head_id": 1326,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:热线-210202-001895",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100510",
+    "head_id": 524,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100510",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100510",
+    "head_id": 524,
+    "relation_id": 1,
+    "answers": [
+      2421
+    ],
+    "head": "complaint:JZ2021030100510",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响市容"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400857",
+    "head_id": 719,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400857",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400857",
+    "head_id": 719,
+    "relation_id": 1,
+    "answers": [
+      2436
+    ],
+    "head": "complaint:JZ2021030400857",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响通行"
+    ]
+  },
+  {
+    "complaint_id": "网络-210301-000892",
+    "head_id": 1486,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:网络-210301-000892",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "网络-210301-000892",
+    "head_id": 1486,
+    "relation_id": 1,
+    "answers": [
+      2420
+    ],
+    "head": "complaint:网络-210301-000892",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响居民生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200634",
+    "head_id": 608,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200634",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200634",
+    "head_id": 608,
+    "relation_id": 1,
+    "answers": [
+      2421
+    ],
+    "head": "complaint:JZ2021030200634",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响市容"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500403",
+    "head_id": 751,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030500403",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300466",
+    "head_id": 641,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030300466",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400023",
+    "head_id": 663,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400023",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100222",
+    "head_id": 1086,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031100222",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021600257",
+    "head_id": 345,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021600257",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021600212",
+    "head_id": 343,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021600212",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900767",
+    "head_id": 201,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900767",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700518",
+    "head_id": 134,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020700518",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700518",
+    "head_id": 134,
+    "relation_id": 1,
+    "answers": [
+      2423
+    ],
+    "head": "complaint:JZ2021020700518",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响市容市貌"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100483",
+    "head_id": 520,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021030100483",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500316",
+    "head_id": 749,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030500316",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900662",
+    "head_id": 1019,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030900662",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022700433",
+    "head_id": 455,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021022700433",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600290",
+    "head_id": 795,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030600290",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "网络-210210-009886",
+    "head_id": 1473,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:网络-210210-009886",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700112",
+    "head_id": 854,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700112",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031600416",
+    "head_id": 1254,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031600416",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210302-019395",
+    "head_id": 1403,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:热线-210302-019395",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "热线-210302-019395",
+    "head_id": 1403,
+    "relation_id": 1,
+    "answers": [
+      2447
+    ],
+    "head": "complaint:热线-210302-019395",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:汽车无法停放"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032500375",
+    "head_id": 1306,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021032500375",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032500375",
+    "head_id": 1306,
+    "relation_id": 1,
+    "answers": [
+      2429
+    ],
+    "head": "complaint:JZ2021032500375",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响正常工作"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021033000069",
+    "head_id": 1320,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021033000069",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "热线-210310-002880",
+    "head_id": 1429,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210310-002880",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-016884",
+    "head_id": 1452,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210325-016884",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-016884",
+    "head_id": 1452,
+    "relation_id": 1,
+    "answers": [
+      2412
+    ],
+    "head": "complaint:热线-210325-016884",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响办公"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-018202",
+    "head_id": 1455,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210325-018202",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-019931",
+    "head_id": 1458,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210325-019931",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-019931",
+    "head_id": 1458,
+    "relation_id": 1,
+    "answers": [
+      2381
+    ],
+    "head": "complaint:热线-210325-019931",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:停电"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-026016",
+    "head_id": 1459,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210325-026016",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210325-026016",
+    "head_id": 1459,
+    "relation_id": 1,
+    "answers": [
+      2381
+    ],
+    "head": "complaint:热线-210325-026016",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:停电"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200119",
+    "head_id": 21,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020200119",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200119",
+    "head_id": 21,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:JZ2021020200119",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210210-011548",
+    "head_id": 1362,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210210-011548",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020700231",
+    "head_id": 121,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020700231",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000378",
+    "head_id": 230,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021000378",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600310",
+    "head_id": 800,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030600310",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031100586",
+    "head_id": 1109,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031100586",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "热线-210227-007461",
+    "head_id": 1396,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210227-007461",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210227-007461",
+    "head_id": 1396,
+    "relation_id": 1,
+    "answers": [
+      2455
+    ],
+    "head": "complaint:热线-210227-007461",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:积水溅到身上"
+    ]
+  },
+  {
+    "complaint_id": "热线-210210-008236",
+    "head_id": 1361,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:热线-210210-008236",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "热线-210210-008236",
+    "head_id": 1361,
+    "relation_id": 1,
+    "answers": [
+      2404
+    ],
+    "head": "complaint:热线-210210-008236",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:异味扰民"
+    ]
+  },
+  {
+    "complaint_id": "热线-210213-008777",
+    "head_id": 1371,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210213-008777",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022200636",
+    "head_id": 391,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022200636",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200350",
+    "head_id": 564,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030200350",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400649",
+    "head_id": 709,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400649",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900654",
+    "head_id": 1017,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030900654",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022600285",
+    "head_id": 437,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022600285",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210204-009190",
+    "head_id": 1337,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210204-009190",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210204-009190",
+    "head_id": 1337,
+    "relation_id": 1,
+    "answers": [
+      2401
+    ],
+    "head": "complaint:热线-210204-009190",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:市民掉下去"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000303",
+    "head_id": 225,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021000303",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800657",
+    "head_id": 960,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800657",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200556",
+    "head_id": 1183,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200556",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200556",
+    "head_id": 1183,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021031200556",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200557",
+    "head_id": 1184,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200557",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200569",
+    "head_id": 1186,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031200569",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200569",
+    "head_id": 1186,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021031200569",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100748",
+    "head_id": 540,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030100748",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100748",
+    "head_id": 540,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030100748",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200327",
+    "head_id": 562,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030200327",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200327",
+    "head_id": 562,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030200327",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200873",
+    "head_id": 623,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200873",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200873",
+    "head_id": 623,
+    "relation_id": 1,
+    "answers": [
+      2422
+    ],
+    "head": "complaint:JZ2021030200873",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响市容和交通"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300076",
+    "head_id": 627,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021030300076",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300076",
+    "head_id": 627,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030300076",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500019",
+    "head_id": 729,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030500019",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500019",
+    "head_id": 729,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030500019",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600145",
+    "head_id": 779,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030600145",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600145",
+    "head_id": 779,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030600145",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200781",
+    "head_id": 1194,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031200781",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200781",
+    "head_id": 1194,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021031200781",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031900599",
+    "head_id": 1292,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021031900599",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032300878",
+    "head_id": 1302,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021032300878",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032300878",
+    "head_id": 1302,
+    "relation_id": 1,
+    "answers": [
+      2427
+    ],
+    "head": "complaint:JZ2021032300878",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响机动车正常进出"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021033000929",
+    "head_id": 1324,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021033000929",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021033000929",
+    "head_id": 1324,
+    "relation_id": 1,
+    "answers": [
+      2389
+    ],
+    "head": "complaint:JZ2021033000929",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:堵塞交通"
+    ]
+  },
+  {
+    "complaint_id": "热线-210303-003373",
+    "head_id": 1406,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210303-003373",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210303-003373",
+    "head_id": 1406,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:热线-210303-003373",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "热线-210304-005593",
+    "head_id": 1411,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210304-005593",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210304-033638",
+    "head_id": 1415,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:热线-210304-033638",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "热线-210304-033638",
+    "head_id": 1415,
+    "relation_id": 1,
+    "answers": [
+      2379
+    ],
+    "head": "complaint:热线-210304-033638",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:人车混行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210305-002997",
+    "head_id": 1420,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210305-002997",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210305-002997",
+    "head_id": 1420,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:热线-210305-002997",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "热线-210308-044484",
+    "head_id": 1428,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210308-044484",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210308-044484",
+    "head_id": 1428,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:热线-210308-044484",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "网络-210309-046370",
+    "head_id": 1494,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:网络-210309-046370",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "网络-210309-046370",
+    "head_id": 1494,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:网络-210309-046370",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "热线-210208-035554",
+    "head_id": 1354,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:热线-210208-035554",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020300328",
+    "head_id": 53,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020300328",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020300328",
+    "head_id": 53,
+    "relation_id": 1,
+    "answers": [
+      2431
+    ],
+    "head": "complaint:JZ2021020300328",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响环境"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020200230",
+    "head_id": 26,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020200230",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800294",
+    "head_id": 151,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800294",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021500066",
+    "head_id": 315,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021500066",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021100271",
+    "head_id": 269,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021100271",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022300543",
+    "head_id": 397,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022300543",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031400516",
+    "head_id": 1224,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031400516",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022400019",
+    "head_id": 402,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022400019",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022400019",
+    "head_id": 402,
+    "relation_id": 1,
+    "answers": [
+      2433
+    ],
+    "head": "complaint:JZ2021022400019",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响行车出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210204-028452",
+    "head_id": 1341,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210204-028452",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210204-028452",
+    "head_id": 1341,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:热线-210204-028452",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022200319",
+    "head_id": 385,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022200319",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022800203",
+    "head_id": 466,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022800203",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031400140",
+    "head_id": 1218,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031400140",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031400140",
+    "head_id": 1218,
+    "relation_id": 1,
+    "answers": [
+      2439
+    ],
+    "head": "complaint:JZ2021031400140",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:扰民"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100039",
+    "head_id": 474,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030100039",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030100039",
+    "head_id": 474,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:JZ2021030100039",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400522",
+    "head_id": 698,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400522",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400528",
+    "head_id": 699,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030400528",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400528",
+    "head_id": 699,
+    "relation_id": 1,
+    "answers": [
+      2383
+    ],
+    "head": "complaint:JZ2021030400528",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:出行不便"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200389",
+    "head_id": 1171,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031200389",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200389",
+    "head_id": 1171,
+    "relation_id": 1,
+    "answers": [
+      2407
+    ],
+    "head": "complaint:JZ2021031200389",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响交通"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031200489",
+    "head_id": 1180,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021031200489",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031900489",
+    "head_id": 1291,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021031900489",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021031900489",
+    "head_id": 1291,
+    "relation_id": 1,
+    "answers": [
+      2439
+    ],
+    "head": "complaint:JZ2021031900489",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:扰民"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032000062",
+    "head_id": 1294,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021032000062",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032000517",
+    "head_id": 1297,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021032000517",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021032700068",
+    "head_id": 1315,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021032700068",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020500144",
+    "head_id": 91,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020500144",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020900748",
+    "head_id": 200,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020900748",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800645",
+    "head_id": 166,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020800645",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020300742",
+    "head_id": 64,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020300742",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021100051",
+    "head_id": 253,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021100051",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021000544",
+    "head_id": 241,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021021000544",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021021100031",
+    "head_id": 252,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021021100031",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020800067",
+    "head_id": 143,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021020800067",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100211",
+    "head_id": 8,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021020100211",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021020100211",
+    "head_id": 8,
+    "relation_id": 1,
+    "answers": [
+      2411
+    ],
+    "head": "complaint:JZ2021020100211",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "热线-210203-007018",
+    "head_id": 1332,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210203-007018",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210203-007018",
+    "head_id": 1332,
+    "relation_id": 1,
+    "answers": [
+      2397
+    ],
+    "head": "complaint:热线-210203-007018",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:安全隐患"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022700376",
+    "head_id": 452,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022700376",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022500148",
+    "head_id": 418,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022500148",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022500148",
+    "head_id": 418,
+    "relation_id": 1,
+    "answers": [
+      2453
+    ],
+    "head": "complaint:JZ2021022500148",
+    "relation": "包含后果",
+    "answer_texts": [
+      "outcome:破坏生态环境及法治"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022100199",
+    "head_id": 379,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021022100199",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "热线-210223-015345",
+    "head_id": 1390,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:热线-210223-015345",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022200521",
+    "head_id": 387,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022200521",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021022600512",
+    "head_id": 441,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021022600512",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200067",
+    "head_id": 550,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030200067",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200190",
+    "head_id": 556,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200190",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200332",
+    "head_id": 563,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200332",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030200463",
+    "head_id": 577,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030200463",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300428",
+    "head_id": 639,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030300428",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300430",
+    "head_id": 640,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030300430",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300507",
+    "head_id": 645,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030300507",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300516",
+    "head_id": 646,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030300516",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300519",
+    "head_id": 647,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030300519",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300570",
+    "head_id": 648,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030300570",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030300857",
+    "head_id": 659,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030300857",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030400465",
+    "head_id": 683,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030400465",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500253",
+    "head_id": 747,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030500253",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500275",
+    "head_id": 748,
+    "relation_id": 4,
+    "answers": [
+      2467
+    ],
+    "head": "complaint:JZ2021030500275",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:易发生冲突"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500587",
+    "head_id": 763,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030500587",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030500618",
+    "head_id": 766,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030500618",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600133",
+    "head_id": 776,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600133",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600368",
+    "head_id": 815,
+    "relation_id": 4,
+    "answers": [
+      2465
+    ],
+    "head": "complaint:JZ2021030600368",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响出行"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030600422",
+    "head_id": 831,
+    "relation_id": 4,
+    "answers": [
+      2468
+    ],
+    "head": "complaint:JZ2021030600422",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:火灾风险"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700278",
+    "head_id": 871,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700278",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030700383",
+    "head_id": 897,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030700383",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030800655",
+    "head_id": 959,
+    "relation_id": 4,
+    "answers": [
+      2466
+    ],
+    "head": "complaint:JZ2021030800655",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:影响日常生活"
+    ]
+  },
+  {
+    "complaint_id": "JZ2021030900842",
+    "head_id": 1028,
+    "relation_id": 4,
+    "answers": [
+      2464
+    ],
+    "head": "complaint:JZ2021030900842",
+    "relation": "包含风险",
+    "answer_texts": [
+      "risk:人身安全风险"
+    ]
+  }
+]
