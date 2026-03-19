@@ -107,6 +107,21 @@ def build_edge_index(triples: np.ndarray) -> Tuple[torch.Tensor, torch.Tensor]:
     return edge_index, edge_type
 
 
+def _load_txt_triples(txt_path: Path) -> np.ndarray:
+    """Load triples from a processed *.txt (head_id \\t relation_id \\t tail_id)."""
+    rows: List[Tuple[int, int, int]] = []
+    with txt_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            h, r, t = line.split("\t")
+            rows.append((int(h), int(r), int(t)))
+    if not rows:
+        return np.empty((0, 3), dtype=np.int64)
+    return np.array(rows, dtype=np.int64)
+
+
 def _build_tail_dict(train_triples: np.ndarray) -> Dict[Tuple[int, int], set]:
     """(head, rel) -> set of true tails in train."""
     mapping: Dict[Tuple[int, int], set] = {}
@@ -223,10 +238,25 @@ def train_rgcn(
 
     kg = load_processed_data(data_root)
 
-    # 图结构只用 train 图构建
-    edge_index, edge_type = build_edge_index(kg.train_triples)
-    edge_index = edge_index.to(device)
-    edge_type = edge_type.to(device)
+    processed = data_root / "processed"
+
+    # 训练阶段：图结构只用 train 图构建（避免泄漏目标边）
+    edge_index_train, edge_type_train = build_edge_index(kg.train_triples)
+    edge_index_train = edge_index_train.to(device)
+    edge_type_train = edge_type_train.to(device)
+
+    # 评估阶段：为了让 valid/test 的“新诉求输入边”可被编码，
+    # 使用 background.txt 作为邻接图来源（剔除目标关系，仅保留输入证据与因果链内部边）。
+    bg_path = processed / "background.txt"
+    if bg_path.exists():
+        bg_triples = _load_txt_triples(bg_path)
+        edge_index_eval, edge_type_eval = build_edge_index(bg_triples)
+        edge_index_eval = edge_index_eval.to(device)
+        edge_type_eval = edge_type_eval.to(device)
+        print("[R-GCN] Eval adjacency from background.txt", flush=True)
+    else:
+        edge_index_eval, edge_type_eval = edge_index_train, edge_type_train
+        print("[R-GCN] WARNING: background.txt not found; eval adjacency uses train graph", flush=True)
 
     # 关系/实体类型信息（风险/后果专用）
     entity2id, relation2id, risk_entities, outcome_entities = _build_type_sets(
@@ -246,14 +276,16 @@ def train_rgcn(
     triples = torch.tensor(kg.train_triples, dtype=torch.long, device=device)
     num_train = triples.size(0)
 
+    # evaluate 阶段缓存编码结果，避免在 score_fn 中重复 encode（大幅加速且更稳定）
+    x_eval_cached = None
+
     def score_fn(h_np, r_np, t_np):
         model.eval()
         with torch.no_grad():
-            x = model.encode(edge_index, edge_type)
             h = torch.tensor(h_np, dtype=torch.long, device=device)
             r = torch.tensor(r_np, dtype=torch.long, device=device)
             t = torch.tensor(t_np, dtype=torch.long, device=device)
-            scores = model.score(x, h, r, t).cpu().numpy()
+            scores = model.score(x_eval_cached, h, r, t).cpu().numpy()
         return scores
 
     for epoch in range(1, epochs + 1):
@@ -266,8 +298,8 @@ def train_rgcn(
             batch = triples[idx]
             h_pos, r_pos, t_pos = batch[:, 0], batch[:, 1], batch[:, 2]
 
-            # forward to get embeddings
-            x = model.encode(edge_index, edge_type)
+            # forward to get embeddings (training adjacency)
+            x = model.encode(edge_index_train, edge_type_train)
 
             pos_score = model.score(x, h_pos, r_pos, t_pos)
 
@@ -302,6 +334,10 @@ def train_rgcn(
             print(f"[R-GCN] epoch {epoch}/{epochs}, loss={epoch_loss:.4f}")
 
     print("[R-GCN] Evaluating on valid/test...")
+    # 评估阶段固定使用 cached 编码向量，避免在每个候选 tail 上重复 encode
+    model.eval()
+    with torch.no_grad():
+        x_eval_cached = model.encode(edge_index_eval, edge_type_eval)
     valid_metrics = evaluate_tail_predictions(
         kg.valid_queries, score_fn, kg.num_entities, kg.all_triples_set
     )

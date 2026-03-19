@@ -1,4 +1,5 @@
 import json
+import math
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -11,6 +12,10 @@ from baseline.data import load_processed_data
 from baseline.metrics import evaluate_tail_predictions
 from subgraph_model.subgraph import build_adjacency, extract_local_subgraph
 from subgraph_model.encoder import LocalRGCNEncoder
+
+
+# 元路径特征模式：binary / count / log_normalized（默认）
+METAPATH_FEAT_MODE = "log_normalized"
 
 
 class MetapathSubgraphModel(nn.Module):
@@ -29,6 +34,7 @@ class MetapathSubgraphModel(nn.Module):
         dim: int = 64,
         num_layers: int = 2,
         num_metapaths: int = 5,
+        dropout: float = 0.1,
     ):
         super().__init__()
         self.encoder = LocalRGCNEncoder(
@@ -41,9 +47,20 @@ class MetapathSubgraphModel(nn.Module):
         self.relation_emb = nn.Embedding(num_relations, dim)
         nn.init.xavier_uniform_(self.relation_emb.weight)
 
-        # 简单元路径编码：one-hot/计数 -> 线性 -> ReLU
-        self.metapath_proj = nn.Linear(num_metapaths, dim)
-        nn.init.xavier_uniform_(self.metapath_proj.weight)
+        # 元路径编码：5 维特征 -> 两层 MLP -> dim
+        # 支持计数 / 归一化后的连续特征
+        self.metapath_encoder = nn.Sequential(
+            nn.Linear(num_metapaths, dim),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(dim, dim),
+            nn.LayerNorm(dim),
+            nn.ReLU(),
+        )
+
+        # tail 侧门控融合：根据 [z_t_struct, z_meta] 学习逐维门控系数 alpha
+        self.metapath_gate = nn.Linear(dim * 2, dim)
+        nn.init.xavier_uniform_(self.metapath_gate.weight)
 
     def forward(
         self,
@@ -73,11 +90,14 @@ class MetapathSubgraphModel(nn.Module):
         z_h = z_local[h_idx]  # (B, dim)
         z_t_struct = z_local[t_idx]  # (B, dim)
 
-        # 元路径特征编码
-        z_meta = torch.relu(self.metapath_proj(metapath_feats.to(device)))  # (B, dim)
+        # 元路径特征编码得到语义向量 z_meta
+        z_meta = self.metapath_encoder(metapath_feats.to(device))  # (B, dim)
 
-        # 结构 + 语义 融合
-        z_t = z_t_struct + z_meta
+        # 结构 + 语义 门控融合：
+        # gate_input = [z_t_struct, z_meta]，alpha 为逐维门控系数
+        gate_input = torch.cat([z_t_struct, z_meta], dim=-1)  # (B, 2*dim)
+        alpha = torch.sigmoid(self.metapath_gate(gate_input))  # (B, dim)
+        z_t = z_t_struct + alpha * z_meta
 
         # DistMult 打分：<h, r, t_fused>
         r = self.relation_emb(rels.to(device))
@@ -172,9 +192,16 @@ def _extract_metapath_feat_for_tail(
     tail_id: int,
     adjacency: Dict[int, List[Tuple[int, int]]],
     relation2id: Dict[str, int],
+    mode: str = METAPATH_FEAT_MODE,
 ) -> List[float]:
     """
-    在背景邻接上、围绕 head 的局部结构，提取某个 tail 节点的 5 维元路径特征（0/1 是否存在）。
+    在背景邻接上、围绕 head 的局部结构，提取某个 tail 节点的 5 维元路径特征。
+
+    支持三种模式：
+      - binary:        每种元路径是否存在 (0/1)
+      - count:         满足模式的路径实例条数
+      - log_normalized:
+          先对 count 做 log1p，再按 sum 归一化，得到稳定的连续特征。
 
     定义的元路径：
       P1: 诉求 -> 隐患 -> 风险
@@ -191,31 +218,25 @@ def _extract_metapath_feat_for_tail(
     rel_trigger = relation2id.get("触发风险")
 
     # P1: complaint -(包含隐患)-> hidden -(导致)-> risk
-    exists_p1 = 0
+    count_p1 = 0
     for r1, h_node in adjacency.get(head_id, []):
         if r1 != rel_inc_hidden:
             continue
         for r2, r_node in adjacency.get(h_node, []):
             if r2 == rel_leads_to and r_node == tail_id:
-                exists_p1 = 1
-                break
-        if exists_p1:
-            break
+                count_p1 += 1
 
     # P2: complaint -(包含事件)-> event -(触发风险)-> risk
-    exists_p2 = 0
+    count_p2 = 0
     for r1, e_node in adjacency.get(head_id, []):
         if r1 != rel_inc_event:
             continue
         for r2, r_node in adjacency.get(e_node, []):
             if r2 == rel_trigger and r_node == tail_id:
-                exists_p2 = 1
-                break
-        if exists_p2:
-            break
+                count_p2 += 1
 
     # P3: complaint -(包含实体)-> entity -(易感于)-> hidden -(导致)-> risk
-    exists_p3 = 0
+    count_p3 = 0
     for r1, ent_node in adjacency.get(head_id, []):
         if r1 != rel_inc_entity:
             continue
@@ -224,15 +245,10 @@ def _extract_metapath_feat_for_tail(
                 continue
             for r3, r_node in adjacency.get(h_node, []):
                 if r3 == rel_leads_to and r_node == tail_id:
-                    exists_p3 = 1
-                    break
-            if exists_p3:
-                break
-        if exists_p3:
-            break
+                    count_p3 += 1
 
     # P4: complaint -(包含隐患)-> hidden -(导致)-> risk -(导致)-> outcome
-    exists_p4 = 0
+    count_p4 = 0
     for r1, h_node in adjacency.get(head_id, []):
         if r1 != rel_inc_hidden:
             continue
@@ -241,15 +257,10 @@ def _extract_metapath_feat_for_tail(
                 continue
             for r3, o_node in adjacency.get(r_node, []):
                 if r3 == rel_leads_to and o_node == tail_id:
-                    exists_p4 = 1
-                    break
-            if exists_p4:
-                break
-        if exists_p4:
-            break
+                    count_p4 += 1
 
     # P5: complaint -(包含事件)-> event -(触发风险)-> risk -(导致)-> outcome
-    exists_p5 = 0
+    count_p5 = 0
     for r1, e_node in adjacency.get(head_id, []):
         if r1 != rel_inc_event:
             continue
@@ -258,14 +269,22 @@ def _extract_metapath_feat_for_tail(
                 continue
             for r3, o_node in adjacency.get(r_node, []):
                 if r3 == rel_leads_to and o_node == tail_id:
-                    exists_p5 = 1
-                    break
-            if exists_p5:
-                break
-        if exists_p5:
-            break
+                    count_p5 += 1
 
-    return [float(exists_p1), float(exists_p2), float(exists_p3), float(exists_p4), float(exists_p5)]
+    counts = [float(count_p1), float(count_p2), float(count_p3), float(count_p4), float(count_p5)]
+
+    mode = (mode or "log_normalized").lower()
+    if mode == "binary":
+        return [1.0 if c > 0.0 else 0.0 for c in counts]
+    if mode == "count":
+        return counts
+
+    # 默认：log_normalized
+    feats = [math.log1p(c) for c in counts]
+    s = sum(feats)
+    if s > 0.0:
+        feats = [v / s for v in feats]
+    return feats
 
 
 def train_metapath_subgraph_model(
@@ -362,9 +381,9 @@ def train_metapath_subgraph_model(
 
                     local_nodes = node_ids.cpu().tolist()
 
-                    # 正样本元路径特征
+                    # 正样本元路径特征（计数/归一化后的 5 维向量）
                     f_pos = _extract_metapath_feat_for_tail(
-                        h, t, adjacency, relation2id
+                        h, t, adjacency, relation2id, METAPATH_FEAT_MODE
                     )
                     metapath_pos = torch.tensor(
                         [f_pos], dtype=torch.float32, device=device
@@ -396,7 +415,7 @@ def train_metapath_subgraph_model(
                         continue
 
                     f_neg = _extract_metapath_feat_for_tail(
-                        h, t_neg, adjacency, relation2id
+                        h, t_neg, adjacency, relation2id, METAPATH_FEAT_MODE
                     )
                     metapath_neg = torch.tensor(
                         [f_neg], dtype=torch.float32, device=device
@@ -468,9 +487,11 @@ def train_metapath_subgraph_model(
 
             valid_tails = [int(t_np[i]) for i in valid_idx]
 
-            # 构造元路径特征
+            # 构造元路径特征（对所有候选 tail 一次性计算）
             feats = [
-                _extract_metapath_feat_for_tail(h_int, t_id, adjacency, relation2id)
+                _extract_metapath_feat_for_tail(
+                    h_int, t_id, adjacency, relation2id, METAPATH_FEAT_MODE
+                )
                 for t_id in valid_tails
             ]
             metapath_batch = torch.tensor(
