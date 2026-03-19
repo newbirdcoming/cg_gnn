@@ -1,2 +1,2 @@
 #忽略results下的文件
-results/
+results/*
