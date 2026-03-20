@@ -595,6 +595,10 @@ def train_grail_style_model(
 
     print("[GraIL] Training done. Evaluating...", flush=True)
 
+    # 实体类型集合（用于评估时快速过滤非目标类型候选）
+    risk_set_eval = set(risk_entities)
+    outcome_set_eval = set(outcome_entities)
+
     # 评估时：同一 head 的 dist_h 只算一次（所有候选 tail 复用）
     dist_h_eval_cache: Dict[int, Dict[int, int]] = {}
 
@@ -603,7 +607,7 @@ def train_grail_style_model(
             dist_h_eval_cache[h] = _bfs_distances(h, undirected_adj, k)
         return dist_h_eval_cache[h]
 
-    eval_query_count = [0]   # 用列表以便闭包内修改
+    eval_query_count = [0]
 
     def score_fn(h_np: np.ndarray, r_np: np.ndarray, t_np: np.ndarray) -> np.ndarray:
         model.eval()
@@ -619,13 +623,24 @@ def train_grail_style_model(
         if eval_query_count[0] % 10 == 0:
             print(f"[GraIL] Evaluating query #{eval_query_count[0]}...", flush=True)
 
+        # 实体类型过滤：只对匹配类型的候选打分（与训练负采样约束一致）
+        if r_int == rel_risk:
+            type_set = risk_set_eval
+        else:
+            type_set = outcome_set_eval
+
         # 同一 head 的 BFS 距离只算一次
         dist_h = _get_dist_h(h_int)
 
         with torch.no_grad():
             for i, t_int in enumerate(t_np):
                 t_int = int(t_int)
-                # 复用 dist_h，仅对当前 tail 新算 dist_t
+
+                # 非目标类型实体直接跳过（保持 -1e9 默认值）
+                if t_int not in type_set:
+                    continue
+
+                # 仅对当前 tail 计算 dist_t
                 dist_t = _bfs_distances(t_int, undirected_adj, k)
 
                 node_set = set(dist_h.keys()) | set(dist_t.keys())
