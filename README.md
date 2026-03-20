@@ -32,6 +32,7 @@
   - `metrics.py`：实现 filtered setting 下的 Hits@K / MRR 评估
   - `transe_baseline.py`：TransE 链路预测基线
   - `rgcn_baseline.py`：R-GCN 图模型基线
+  - `grail_style.py`：GraIL-style 对比基线（query-specific 封闭子图 + 结构特征 + 消息传递编码器）
 - `subgraph_model/`
   - `subgraph.py`：邻接表构建工具（`build_adjacency`）
   - `subgraph_dynamic.py`：动态子图提取核心逻辑
@@ -46,6 +47,7 @@
   - `rgcn_metrics.json`：R-GCN 在 valid/test 上的指标
   - `subgraph_minimal_dynamic_metrics.json`：动态子图模型在 valid/test 上的指标
   - `subgraph_dynamic_fusion_metrics.json`：动态子图 + 关键路径融合模型在 valid/test 上的指标
+  - `grail_style_metrics.json`：GraIL-style baseline 在 valid/test 上的指标
 - 其他：
   - `background.txt`：实验范围与任务背景说明
   - `task.txt`：整体实验设定与阶段划分
@@ -260,6 +262,54 @@ python -m subgraph_model.dynamic_keypath_fusion_model
 
 - 实现文件：`subgraph_model/dynamic_keypath_fusion_model.py`
 - 输出：`results/subgraph_dynamic_fusion_metrics.json`
+
+---
+
+## 阶段 5：GraIL-style 对比基线
+
+本实现是一个**最小可运行、思想对齐的 GraIL-style baseline**，用于第四章对比实验。不是对任何外部原始工程的严格逐项复现，仅在以下四个核心维度上与 GraIL 思想对齐：
+
+| 维度 | GraIL-style Baseline | 主模型（动态子图融合版）|
+|---|---|---|
+| 子图构建 | k-hop BFS 封闭子图（双侧展开，无规则过滤） | 规则路径过滤子图（P1–P5） |
+| 节点特征 | 结构距离特征（dist_h/dist_t/is_head/is_tail） | 全局实体 embedding（id-based） |
+| 图编码器 | GraIL 风格最小消息传递 R-GCN | self-loop 映射 |
+| 打分方式 | MLP(z_h, z_t, r_emb) | λ·DistMult + (1-λ)·path_score |
+
+### 5.1 核心设计
+
+**子图提取**（`extract_grail_subgraph`）：
+- 从 head 和 candidate tail 各做 k=2 跳 BFS（补逆边，无向图）
+- 取两侧邻域并集作为子图节点
+- 保留子图内所有有向边，排除目标关系（包含风险/包含后果）
+- head 和 tail 强制包含
+
+**节点结构特征**（4 维，不含实体 id）：
+```
+[dist_h_norm, dist_t_norm, is_head, is_tail]
+```
+BFS 不可达节点距离设为 k+1，归一化后截断至 1.0。
+
+**编码器**（`GraILEncoder`）：
+- `input_proj`：Linear(4, dim) 将结构特征投影到隐层
+- 多层 `GraILConvLayer`：对每个节点按入边关系类型做加权聚合，入度归一化
+
+**打分**：
+```
+score(h, r, t) = MLP( concat(z_h, z_t, r_emb) )
+```
+relation_id 通过 r_emb 显式参与打分。
+
+### 5.2 运行命令
+
+```bash
+python -m baseline.grail_style
+```
+
+运行后会先打印风险/后果任务各一个样本的 query-specific 子图（节点数、边数、角色标记、距离特征），随后开始训练并输出评估指标。
+
+- 输出：`results/grail_style_metrics.json`
+- 输出：`outputs/grail_style/metrics.json`
 
 ---
 
