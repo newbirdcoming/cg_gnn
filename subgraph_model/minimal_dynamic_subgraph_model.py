@@ -10,9 +10,41 @@ import torch.nn as nn
 
 from baseline.data import load_processed_data
 from baseline.metrics import evaluate_tail_predictions
-from subgraph_model.minimal_subgraph_model import MinimalSubgraphModel
+from subgraph_model.encoder import LocalRGCNEncoder
+from subgraph_model.decoder import SubgraphDistMultDecoder
 from subgraph_model.subgraph import build_adjacency, extract_local_subgraph
 from subgraph_model.subgraph_dynamic import extract_dynamic_subgraph, dynamic_path_support_mapping
+
+
+class MinimalSubgraphModel(nn.Module):
+    def __init__(
+        self,
+        num_entities: int,
+        num_relations: int,
+        dim: int = 64,
+        num_layers: int = 2,
+    ):
+        super().__init__()
+        self.encoder = LocalRGCNEncoder(
+            num_entities=num_entities,
+            num_relations=num_relations,
+            dim=dim,
+            num_layers=num_layers,
+        )
+        self.decoder = SubgraphDistMultDecoder(num_relations=num_relations, dim=dim)
+
+    def forward(
+        self,
+        node_ids: torch.Tensor,
+        edge_index: torch.Tensor,
+        edge_type: torch.Tensor,
+        global2local: Dict[int, int],
+        heads: torch.Tensor,
+        rels: torch.Tensor,
+        tails: torch.Tensor,
+    ) -> torch.Tensor:
+        z_local = self.encoder(node_ids, edge_index, edge_type)
+        return self.decoder(z_local, global2local, heads, rels, tails)
 
 
 STRICT_EVAL_DYNAMIC = False
