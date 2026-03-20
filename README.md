@@ -33,6 +33,7 @@
   - `transe_baseline.py`：TransE 链路预测基线
   - `rgcn_baseline.py`：R-GCN 图模型基线
   - `grail_style.py`：GraIL-style 对比基线（query-specific 封闭子图 + 结构特征 + 消息传递编码器）
+  - `sasilp.py`：SASILP-style 对比基线（PPR 结构分 + 谐波语义分 节点筛选 + 关系语义节点初始化）
 - `subgraph_model/`
   - `subgraph.py`：邻接表构建工具（`build_adjacency`）
   - `subgraph_dynamic.py`：动态子图提取核心逻辑
@@ -48,6 +49,7 @@
   - `subgraph_minimal_dynamic_metrics.json`：动态子图模型在 valid/test 上的指标
   - `subgraph_dynamic_fusion_metrics.json`：动态子图 + 关键路径融合模型在 valid/test 上的指标
   - `grail_style_metrics.json`：GraIL-style baseline 在 valid/test 上的指标
+  - `sasilp_metrics.json`：SASILP-style baseline 在 valid/test 上的指标
 - 其他：
   - `background.txt`：实验范围与任务背景说明
   - `task.txt`：整体实验设定与阶段划分
@@ -310,6 +312,71 @@ python -m baseline.grail_style
 
 - 输出：`results/grail_style_metrics.json`
 - 输出：`outputs/grail_style/metrics.json`
+
+---
+
+## 阶段 6：SASILP-style 对比基线
+
+在 GraIL-style baseline 基础上，进一步扩展 4 个核心维度，实现 SASILP-style baseline。
+
+| 维度 | GraIL-style | SASILP-style |
+|---|---|---|
+| 节点筛选 | 纯距离剪枝（dist_h + dist_t 升序） | PPR 结构分 + 谐波语义分 加权筛选 |
+| 节点初始化 | 4 维距离标签 | 4 维距离标签 + R 维关系多热语义聚合 |
+| 打分 | MLP(z_h, z_t, r_emb) | MLP(z_h, r_emb, z_t, subgraph_mean) |
+| 消融 | 无 | 5 个独立开关 |
+
+### 6.1 核心模块
+
+**子图提取**（`extract_sasilp_subgraph`）：
+1. 双侧 k-hop BFS 获得候选节点集合
+2. PPR 结构分：以 h/t 为 seed 做稀疏幂迭代 PPR，衡量节点全局结构重要性
+3. 谐波语义分：`0.5*(1/(dist_h+1) + 1/(dist_t+1))`，衡量节点路径间位置
+4. `final_score = λ * struct_score_norm + (1-λ) * sem_score_norm`
+5. 按 final_score 保留 top max_nodes 节点
+
+**节点初始化**：
+```
+rel_sem_init(v) = rel_profile(v) @ relation_emb.weight   # (dim,)
+x_v = input_proj( concat([dist_feat_4dim, rel_sem_init_dim]) )
+```
+
+**打分**：
+```
+score(h, r, t) = MLP( concat(z_h, r_emb, z_t, subgraph_mean) )
+```
+
+### 6.2 消融开关
+
+| 开关 | 默认 | 含义 |
+|---|---|---|
+| `use_structural_score` | True | 使用 PPR 计算结构分 |
+| `use_semantic_score` | True | 使用谐波接近度计算语义分 |
+| `use_subgraph_pruning` | True | 按 final_score 截断节点 |
+| `use_relation_init` | True | 节点初始化加入关系语义聚合 |
+| `use_distance_label` | True | 节点初始化加入距离标签 |
+
+### 6.3 运行命令
+
+```bash
+# 完整 SASILP
+python -m baseline.sasilp
+
+# 消融：仅结构分（无语义分）
+python -c "from baseline.sasilp import main_ablation_no_semantic; main_ablation_no_semantic()"
+
+# 消融：仅语义分（无 PPR）
+python -c "from baseline.sasilp import main_ablation_no_structural; main_ablation_no_structural()"
+
+# 消融：无节点截断（退化为 GraIL-style 子图）
+python -c "from baseline.sasilp import main_ablation_no_pruning; main_ablation_no_pruning()"
+
+# 消融：无关系初始化（退化为 GraIL-style 节点特征）
+python -c "from baseline.sasilp import main_ablation_no_relation_init; main_ablation_no_relation_init()"
+```
+
+- 输出：`results/sasilp_metrics.json`
+- 输出：`outputs/sasilp/metrics.json`
 
 ---
 
