@@ -33,8 +33,8 @@ def extract_dynamic_subgraph(
         P3: 诉求 -> 实体 -> 隐患 -> 风险
 
       Outcome (诉求, 包含后果, candidate_outcome):
-        Q1: 诉求 -> 隐患 -> 风险 -> 后果
-        Q2: 诉求 -> 事件 -> 风险 -> 后果
+        P4: 诉求 -> 隐患 -> 风险 -> 后果
+        P5: 诉求 -> 事件 -> 风险 -> 后果
 
     - complaint(head_id) 与 candidate(tail_id) 必须进入子图；
     - 若无有效关键路径支持：仍返回最小子图 [head_id, tail_id]，但 meta.has_valid_path=False。
@@ -108,7 +108,7 @@ def extract_dynamic_subgraph(
         matched_path_types = sorted(list(set(matched_path_types)))
 
     elif task_type == "outcome":
-        # Q1: head -(包含隐患)-> hidden -(导致)-> risk -(导致)-> tail(outcome)
+        # P4: head -(包含隐患)-> hidden -(导致)-> risk -(导致)-> tail(outcome)
         hidden_candidates = [
             t for r, t in adjacency.get(int(head_id), []) if r == rel_include_hidden
         ]
@@ -122,9 +122,9 @@ def extract_dynamic_subgraph(
                         edges.append((int(head_id), rel_include_hidden, int(h_node)))
                         edges.append((int(h_node), rel_leads_to, int(risk_node)))
                         edges.append((int(risk_node), rel_leads_to, int(tail_id)))
-                        matched_path_types.append("Q1")
+                        matched_path_types.append("P4")
 
-        # Q2: head -(包含事件)-> event -(触发风险)-> risk -(导致)-> tail(outcome)
+        # P5: head -(包含事件)-> event -(触发风险)-> risk -(导致)-> tail(outcome)
         event_candidates = [
             t for r, t in adjacency.get(int(head_id), []) if r == rel_include_event
         ]
@@ -138,7 +138,7 @@ def extract_dynamic_subgraph(
                         edges.append((int(head_id), rel_include_event, int(e_node)))
                         edges.append((int(e_node), rel_trigger_risk, int(risk_node)))
                         edges.append((int(risk_node), rel_leads_to, int(tail_id)))
-                        matched_path_types.append("Q2")
+                        matched_path_types.append("P5")
 
         matched_path_types = sorted(list(set(matched_path_types)))
 
@@ -235,7 +235,7 @@ def dynamic_path_support_mapping(
                         _add(risk_tail, "P3")
 
     elif relation_id == rel_include_outcome:
-        # Q1
+        # P4
         for _, hidden in adjacency.get(h, []):
             if _ != rel_include_hidden:
                 continue
@@ -244,9 +244,9 @@ def dynamic_path_support_mapping(
                     continue
                 for r3, out_node in adjacency.get(int(risk_node), []):
                     if r3 == rel_leads_to:
-                        _add(out_node, "Q1")
+                        _add(out_node, "P4")
 
-        # Q2
+        # P5
         for _, event in adjacency.get(h, []):
             if _ != rel_include_event:
                 continue
@@ -255,7 +255,7 @@ def dynamic_path_support_mapping(
                     continue
                 for r3, out_node in adjacency.get(int(risk_node), []):
                     if r3 == rel_leads_to:
-                        _add(out_node, "Q2")
+                        _add(out_node, "P5")
 
     return mapping
 

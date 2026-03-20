@@ -35,15 +35,17 @@
 - `subgraph_model/`
   - `subgraph.py`：邻接表构建工具（`build_adjacency`）
   - `subgraph_dynamic.py`：动态子图提取核心逻辑
-    - `extract_dynamic_subgraph`：针对 (h, r, t) 三元组，按规则路径（P1/P2/P3/Q1/Q2）构建面向查询的最小子图
+    - `extract_dynamic_subgraph`：针对 (h, r, t) 三元组，按规则路径（P1–P5）构建面向查询的最小子图
     - `dynamic_path_support_mapping`：预计算 (h, r) 下哪些候选 tail 有路径支撑
   - `encoder.py`：`LocalRGCNEncoder`（局部子图 GNN 编码器）
   - `decoder.py`：`SubgraphDistMultDecoder`（DistMult 打分解码器）
   - `minimal_dynamic_subgraph_model.py`：`MinimalSubgraphModel` 类 + 动态子图版完整训练/评估 runner
+  - `dynamic_keypath_fusion_model.py`：`DynamicKeypathFusionModel` 类 + 融合版完整训练/评估 runner
 - `results/`
   - `transe_metrics.json`：TransE 在 valid/test 上的指标
   - `rgcn_metrics.json`：R-GCN 在 valid/test 上的指标
   - `subgraph_minimal_dynamic_metrics.json`：动态子图模型在 valid/test 上的指标
+  - `subgraph_dynamic_fusion_metrics.json`：动态子图 + 关键路径融合模型在 valid/test 上的指标
 - 其他：
   - `background.txt`：实验范围与任务背景说明
   - `task.txt`：整体实验设定与阶段划分
@@ -170,7 +172,7 @@ python -m baseline.rgcn_baseline
 
 ## 阶段 3：规则引导的动态子图模型
 
-目标：利用领域规则（风险因果链路径 P1/P2/P3/Q1/Q2）为每个查询动态构建最小支撑子图，替代全图 GNN，提升归纳性和可解释性。
+目标：利用领域规则（风险因果链路径 P1–P5）为每个查询动态构建最小支撑子图，替代全图 GNN，提升归纳性和可解释性。
 
 ### 3.1 核心设计
 
@@ -183,8 +185,8 @@ python -m baseline.rgcn_baseline
 | 包含风险 | P1 | 诉求 -(包含隐患)→ 隐患 -(导致)→ 风险 |
 | 包含风险 | P2 | 诉求 -(包含事件)→ 事件 -(触发风险)→ 风险 |
 | 包含风险 | P3 | 诉求 -(包含实体)→ 实体 -(易感于)→ 隐患 -(导致)→ 风险 |
-| 包含后果 | Q1 | 诉求 -(包含隐患)→ 隐患 -(导致)→ 风险 -(导致)→ 后果 |
-| 包含后果 | Q2 | 诉求 -(包含事件)→ 事件 -(触发风险)→ 风险 -(导致)→ 后果 |
+| 包含后果 | P4 | 诉求 -(包含隐患)→ 隐患 -(导致)→ 风险 -(导致)→ 后果 |
+| 包含后果 | P5 | 诉求 -(包含事件)→ 事件 -(触发风险)→ 风险 -(导致)→ 后果 |
 
 子图 meta 信息包含 `has_valid_path`（是否有有效路径）与 `matched_path_types`（命中的路径类型列表）。
 
@@ -205,7 +207,7 @@ python -m subgraph_model.minimal_dynamic_subgraph_model
 
 ---
 
-## 阶段 4（进行中）：动态子图 + 规则关键路径融合
+## 阶段 4：动态子图 + 规则关键路径融合
 
 目标：在动态子图 graph branch 的基础上，引入规则关键路径 path branch，在**分数层**进行线性融合：
 
@@ -213,9 +215,51 @@ python -m subgraph_model.minimal_dynamic_subgraph_model
 score = lambda_r * score_graph + (1 - lambda_r) * score_path
 ```
 
-其中 `lambda_r` 为针对目标关系（包含风险、包含后果）的可学习融合权重。
+### 4.1 核心设计
 
-实现文件（待新增）：`subgraph_model/dynamic_keypath_fusion_model.py`
+**路径特征**（5 维，固定维度顺序）：
+
+| 维度 | 路径类型 | 路径模式 |
+|---|---|---|
+| P1 | 风险-直接隐患 | 诉求-(包含隐患)→隐患-(导致)→风险 |
+| P2 | 风险-直接事件 | 诉求-(包含事件)→事件-(触发风险)→风险 |
+| P3 | 风险-实体链 | 诉求-(包含实体)→实体-(易感于)→隐患-(导致)→风险 |
+| P4 | 后果-隐患链 | 诉求-(包含隐患)→隐患-(导致)→风险-(导致)→后果 |
+| P5 | 后果-事件链 | 诉求-(包含事件)→事件-(触发风险)→风险-(导致)→后果 |
+
+路径特征直接从 `extract_dynamic_subgraph` 返回的 `meta.matched_path_types` 构造，无需重新枚举全图。
+
+**score_path 计算**：
+
+```
+final_weight = rule_init_weight + delta_weight
+score_path = path_feat @ final_weight[rel_task_idx]
+```
+
+- `rule_init_weight`：固定规则先验（risk=[1,1,0.5,0,0]，outcome=[0,0,0,1,1]），不参与梯度
+- `delta_weight`：可学习修正项，初始化为零，从纯规则先验出发由数据修正
+
+**lambda_r**：仅对两个目标关系各维护一个 logit，sigmoid 后得到 (0,1) 融合权重
+
+**graph branch**：直接复用 `MinimalSubgraphModel`（LocalRGCNEncoder + DistMult），不修改内部结构
+
+### 4.2 训练日志
+
+每个 epoch 输出：
+```
+[Fusion] Epoch N/5  loss=X  used=N  skip_pos=M  skip_neg=K  lambda_risk=X
+```
+- `skip_pos`：无有效路径的正样本跳过数
+- `skip_neg`：找不到合格负样本的跳过数
+
+### 4.3 运行命令
+
+```bash
+python -m subgraph_model.dynamic_keypath_fusion_model
+```
+
+- 实现文件：`subgraph_model/dynamic_keypath_fusion_model.py`
+- 输出：`results/subgraph_dynamic_fusion_metrics.json`
 
 ---
 
