@@ -94,6 +94,7 @@ def extract_grail_subgraph(
     target_relation_ids: List[int],
     k: int = DEFAULT_K,
     max_nodes: int = MAX_NODES,
+    undirected: Dict[int, List[int]] = None,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, Dict[int, int]]:
     """
     GraIL-style query-specific 封闭子图提取。
@@ -104,6 +105,9 @@ def extract_grail_subgraph(
       - 若节点数超过 max_nodes，按 dist_h + dist_t 升序保留最近的节点（head/tail 强制保留）
       - 保留子图节点间的所有原始有向边（排除目标关系类型）
       - 节点特征：[dist_h_norm, dist_t_norm, is_head, is_tail]
+
+    参数 undirected：预构建的无向邻接表，可在外部一次性构建后传入以避免重复计算。
+                     若为 None 则在函数内部构建（调试/单次调用场景）。
 
     返回：
       node_ids     : (N,)     全局实体 id
@@ -117,7 +121,8 @@ def extract_grail_subgraph(
     target_rel_set = set(target_relation_ids)
 
     # ── BFS 距离（无向）──
-    undirected = _build_undirected_adj(adjacency)
+    if undirected is None:
+        undirected = _build_undirected_adj(adjacency)
     dist_h = _bfs_distances(h, undirected, k)
     dist_t = _bfs_distances(t, undirected, k)
 
@@ -479,6 +484,11 @@ def train_grail_style_model(
     num_target = target_triples.size(0)
     print(f"[GraIL] Target training triples: {num_target}", flush=True)
 
+    # 无向邻接表预构建一次，供所有子图提取复用（避免每次 O(|E|) 重建）
+    print("[GraIL] Pre-building undirected adjacency...", flush=True)
+    undirected_adj = _build_undirected_adj(adjacency)
+    print("[GraIL] Done.", flush=True)
+
     # 子图缓存
     SubgraphEntry = Tuple[
         torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, Dict[int, int]
@@ -489,7 +499,8 @@ def train_grail_style_model(
         key = (h, r, t)
         if key not in subgraph_cache:
             subgraph_cache[key] = extract_grail_subgraph(
-                h, r, t, adjacency, target_relation_ids, k=k
+                h, r, t, adjacency, target_relation_ids, k=k,
+                undirected=undirected_adj,
             )
         return subgraph_cache[key]
 
@@ -584,6 +595,16 @@ def train_grail_style_model(
 
     print("[GraIL] Training done. Evaluating...", flush=True)
 
+    # 评估时：同一 head 的 dist_h 只算一次（所有候选 tail 复用）
+    dist_h_eval_cache: Dict[int, Dict[int, int]] = {}
+
+    def _get_dist_h(h: int) -> Dict[int, int]:
+        if h not in dist_h_eval_cache:
+            dist_h_eval_cache[h] = _bfs_distances(h, undirected_adj, k)
+        return dist_h_eval_cache[h]
+
+    eval_query_count = [0]   # 用列表以便闭包内修改
+
     def score_fn(h_np: np.ndarray, r_np: np.ndarray, t_np: np.ndarray) -> np.ndarray:
         model.eval()
         n = len(h_np)
@@ -594,21 +615,71 @@ def train_grail_style_model(
         if r_int not in (rel_risk, rel_outcome):
             return scores
 
+        eval_query_count[0] += 1
+        if eval_query_count[0] % 10 == 0:
+            print(f"[GraIL] Evaluating query #{eval_query_count[0]}...", flush=True)
+
+        # 同一 head 的 BFS 距离只算一次
+        dist_h = _get_dist_h(h_int)
+
         with torch.no_grad():
             for i, t_int in enumerate(t_np):
                 t_int = int(t_int)
-                node_ids, edge_index, edge_type, node_feat, g2l = _get_subgraph(
-                    h_int, r_int, t_int
-                )
+                # 复用 dist_h，仅对当前 tail 新算 dist_t
+                dist_t = _bfs_distances(t_int, undirected_adj, k)
+
+                node_set = set(dist_h.keys()) | set(dist_t.keys())
+                node_set.add(h_int)
+                node_set.add(t_int)
+
+                # max_nodes 修剪（与训练逻辑保持一致）
+                if len(node_set) > MAX_NODES:
+                    max_d = float(k + 1)
+                    candidates_sorted = sorted(
+                        node_set - {h_int, t_int},
+                        key=lambda nid: dist_h.get(nid, max_d) + dist_t.get(nid, max_d),
+                    )
+                    node_set = set(candidates_sorted[: MAX_NODES - 2]) | {h_int, t_int}
+
+                others = sorted(node_set - {h_int, t_int})
+                unique_nodes = [h_int, t_int] + others
+                g2l = {nid: idx for idx, nid in enumerate(unique_nodes)}
+
                 if t_int not in g2l:
                     continue
+
+                # 子图边（排除目标关系）
+                target_rel_set = set(target_relation_ids)
+                edges = []
+                for u in unique_nodes:
+                    for rel, v in adjacency.get(u, []):
+                        if rel not in target_rel_set and v in g2l:
+                            edges.append((g2l[u], rel, g2l[v]))
+
+                if edges:
+                    src_ = [e[0] for e in edges]
+                    dst_ = [e[2] for e in edges]
+                    rel_ = [e[1] for e in edges]
+                    ei = torch.tensor([src_, dst_], dtype=torch.long, device=device)
+                    et = torch.tensor(rel_, dtype=torch.long, device=device)
+                else:
+                    ei = torch.empty((2, 0), dtype=torch.long, device=device)
+                    et = torch.empty((0,), dtype=torch.long, device=device)
+
+                # 节点特征
+                max_dist_f = float(k + 1)
+                feats = []
+                for nid in unique_nodes:
+                    dh = float(dist_h.get(nid, k + 1)) / max_dist_f
+                    dt = float(dist_t.get(nid, k + 1)) / max_dist_f
+                    feats.append([dh, dt, 1.0 if nid == h_int else 0.0,
+                                  1.0 if nid == t_int else 0.0])
+                nf = torch.tensor(feats, dtype=torch.float32, device=device)
+
                 heads_t = torch.tensor([h_int], dtype=torch.long, device=device)
                 rels_t = torch.tensor([r_int], dtype=torch.long, device=device)
                 tails_t = torch.tensor([t_int], dtype=torch.long, device=device)
-                s = model(
-                    node_feat.to(device), edge_index.to(device), edge_type.to(device),
-                    g2l, heads_t, rels_t, tails_t,
-                )
+                s = model(nf, ei, et, g2l, heads_t, rels_t, tails_t)
                 scores[i] = float(s.item())
 
         return scores
@@ -616,9 +687,12 @@ def train_grail_style_model(
     valid_metrics = evaluate_tail_predictions(
         kg.valid_queries, score_fn, kg.num_entities, kg.all_triples_set
     )
+    print("[GraIL] Valid done.", flush=True)
+    eval_query_count[0] = 0
     test_metrics = evaluate_tail_predictions(
         kg.test_queries, score_fn, kg.num_entities, kg.all_triples_set
     )
+    print("[GraIL] Test done.", flush=True)
     return {"valid": valid_metrics, "test": test_metrics}
 
 
